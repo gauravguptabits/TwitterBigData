@@ -1,0 +1,649 @@
+{
+	"categories": [
+		{
+			"name": "Consumer Electronics"
+		}
+
+	],
+	"brands": [
+		{
+			"name": "Sony",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Sony", "#sonyindia", "#SonyXperia"] ,
+					"handle": "Sony"
+				}
+			]
+		},
+		{
+			"name": "Huawei",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Huawei"] ,
+					"handle": "Huawei"
+				}
+			]
+		},
+		{
+			"name": "Panasonic",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Panasonic", "#panasonicindia"] ,
+					"handle": "Panasonic"
+				}
+			]
+		},
+		{
+			"name": "LG",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#LG","#LGLifeIsGood", "#LGLiving"],
+					"handle": "LG"
+				}
+			]
+		},
+		{
+			"name": "Microsoft",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Microsoft","#MicrosoftIndia", "#Windows11", "#MSIgnite"],
+					"handle": "Microsoft"
+				}
+			]
+		}, 
+		{
+			"name": "Intel",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Intel","#IntelEvo" ],	
+					"handle": "Intel"
+				}
+			]
+		},
+		{
+			"name": "IBM",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#IBM","#IBMIndia" ,"#IBMCloud"],					
+					"handle": "IBM"
+				}
+			]
+		},
+		{
+			"name": "Fujitsu",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Fujitsu"] ,
+					"handle": "Fujitsu"
+				}
+			]
+		},
+		{
+			"name": "Bosch",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#bosch", "#boschindia", "#BoschIAA", "#LikeABosch"],	
+					"handle": "Bosch"
+				}
+			]
+		},
+		{
+			"name": "Philips",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#philips", "#philipsindia"],
+					"handle": "Philips"
+				}
+			]
+		},
+		{
+			"name": "PlayStation",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#PlayStation"] ,
+					"handle": "PlayStation"
+				}
+			]
+		},
+		{
+			"name": "GE",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#GE", "#GEIndia", "#GEAviation","#GECatalyst" ],
+					"handle": "GE"
+				}
+			]
+		},
+		{
+			"name": "Samsung",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Samsung","#SamsungIndia", "#SamsungGalaxy", "#SamsungSucks","#SamsungComplaint", "#SamsungSupport"] , 
+					"handle": "Samsung"
+				}
+			]
+		},
+		{
+			"name": "Dolby",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Dolby", "#DolbyIndia","#DolbyCinema", "#DolbyAtmos" ], 			
+					"handle": "Dolby"
+				}
+			]
+		},
+		{
+			"name": "Apple",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Apple", "#iPhone", "#Mac","#MacBook", "#iPad" ] , 	
+					"handle": "Apple"
+				}
+			]
+		},
+		{
+			"name": "ROKU",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#ROKU"] ,
+					"handle": "ROKU"
+				}
+			]
+		},
+		{
+			"name": "Kindle",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Kindle", "#KindleIndia"] ,		
+					"handle": "Kindle"
+				}
+			]
+		},
+		{
+			"name": "Nintendo Wii",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Wii"] ,
+					"handle": "Nintendo Wii"
+				}
+			]
+		},
+		{
+			"name": "Yamaha",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Yamaha", "#YamahaIndia", "#YamahaMotorIndia"],
+					"handle": "Yamaha"
+				}
+			]
+		},
+		{
+			"name": "Toshiba",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Toshiba", "#ToshibaIndia", "#ToshibaStorage"] ,	
+					"handle": "Toshiba"
+				}
+			]
+		},
+		{
+			"name": "Xbox",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Xbox", "#XboxGamePass"] , 
+					"handle": "Xbox"
+				}
+			]
+		},
+		{
+			"name": "RCA",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#RCA", "#RCA100"] , 		
+					"handle": "RCA"
+				}
+			]
+		},
+		{
+			"name": "Sharp",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#SimplySmarter"] ,
+					"handle": "Sharp"
+				}
+			]
+		},
+		{
+			"name": "Sandisk",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Sandisk"] ,
+					"handle": "#Sandisk"
+				}
+			]
+		},
+		{
+			"name": "Daikin",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Daikin", "#DaikinIndia"],					
+					"handle": "Daikin"
+				}
+			]
+		},
+		{
+			"name": "Hitachi",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Hitachi", "#HitachiEnergy", "#Hitachi4Climate"] , 
+					"handle": "Hitachi"
+				}
+			]
+		},
+		{
+			"name": "OGeneral",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#OGeneral", "#OGeneralindia"] , 
+					"handle": "OGeneral"
+				}
+			]
+		},
+		{
+			"name": "Kenstar",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Kenstar"] ,
+					"handle": "Kenstar"
+				}
+			]
+		},
+		{
+			"name": "Whirlpool",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{						
+					"name": "Twitter",
+					"hashtags": ["#Whirlpool"] ,
+					"handle": "Whirlpool"
+				}
+			]
+		},
+        {
+			"name": "Amazon",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Amazon","#AmazonIndia"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "MI",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": [" #miTV", "#mismarttv", "#MIMOBILE", "#Xiaomi"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "OnePLus",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Oneplus", "#oneplustv", "#OnePlusBuds"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "JBL",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#JBL", "#JBLIndia", "#jblspeaker" ],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "BOSE",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#bose", "#bosespeaker", "#boseheadphones" ],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "Boult",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Boult"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "Noise",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Noise", "#NoiseSpeakers" , "#NoiseHeadphones"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "Lenovo",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Lenevo" , "#lenevoideapad", "#lenevolaptop"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "HP",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#hp", "hpindia", "#hplaptop"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "Seagate",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Seagate"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "Onida",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#onida", "#onidatv"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "Canon",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#canon ", "#canonphotography"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "Nikon",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Nikon", "#NikonZ9" , "#nikonphotography"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "GoPro",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#gopro" , "#goprohero8", "#GoProSurf",  "#GoProHERO9" ,"#goprophotograph"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "Dell",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#dell","#dellindia", "#Delllaptop","#DellTech", "#dellcomputer"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "Acer",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Acer", "#AcerIndia","#AcerLaptop"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "Casio",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#casio","#gshock","#casiowatch", "#gshockwatch"],				
+					"handle": "Amazon"
+				}
+			]
+		},
+		{
+			"name": "Realme",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Realme", "#RealmeMobile"],				
+					"handle": "Flipkart"
+				}
+			]
+		},
+		{
+			"name": "Oppo",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#oppo", "#OppoK9s", "#OPPOMobile"],				
+					"handle": "Flipkart"
+				}
+			]
+		},
+		{
+			"name": "Asus",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#ASUS" ,"#ASUSNextGenMotherboard","#asuslaptop", "#AsusIndia"],				
+					"handle": "Flipkart"
+				}
+			]
+		},
+		{
+			"name": "Poco",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#POCO" , "#POCOForIndia", "#pocobuds", "#pocomobile", "#POCOPopBuds"],				
+					"handle": "Flipkart"
+				}
+			]
+		},
+		{
+			"name": "Vivo",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Vivo", "#vivox60t", "#vivoSA", "#vivocamera", "#vivophone", "#vivomobile", "#vivomobiles"],				
+					"handle": "Flipkart"
+				}
+			]
+		},
+		{
+			"name": "Bajaj",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#bajaj", "#bajajauto"],				
+					"handle": "Flipkart"
+				}
+			]
+		},
+		{
+			"name": "Livpure",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Livpure", "#Livpurewater"],				
+					"handle": "Flipkart"
+				}
+			]
+		},
+		{
+			"name": "AOSmith",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#aosmith", "#aosmithwaterheater", "#AOSmithIndia"],				
+					"handle": "Flipkart"
+				}
+			]
+		},
+		{
+			"name": "Kaff",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#kaff"],				
+					"handle": "Flipkart"
+				}
+			]
+		},
+		{
+			"name": "Nokia",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#nokia", "#NokiaC30", "#NokiaMobile", "#Nokia9Pureview", "#NokiaTV", "#NokiaLaptop", "#NokiaPureBook"],				
+					"handle": "Flipkart"
+				}
+			]
+		},
+		{
+			"name": "Thomson",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#Thomson", "#ThomsonTV"],				
+					"handle": "Flipkart"
+				}
+			]
+		},
+		{
+			"name": "Honor",
+			"categories": ["Consumer Electronics"],
+			"platforms": [
+				{
+					"name": "Twitter",
+					"hashtags": ["#honor", "#honormobile", "#honorindia","#Honor9NReview"],				
+					"handle": "Flipkart"
+				}
+			]
+		}
+
+	]
+}
