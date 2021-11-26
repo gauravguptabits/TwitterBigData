@@ -28,23 +28,6 @@ consumer_secret = os.environ['consumer_secret']
 access_token = os.environ['access_token']
 access_token_secret = os.environ['access_token_secret']
 
-# ####################################################
-# client = MongoClient('mongodb://localhost:27017/')
-
-# username = urllib.parse.quote_plus(mongodb_user)
-# password = urllib.parse.quote_plus(mongodb_pass)
-# client = MongoClient('mongodb://%s:%s@localhost:27017/bigdata' % (username, password))
-
-# client = MongoClient('mongodb://localhost:27017/')
-
-# username = urllib.parse.quote_plus(mongodb_user)
-# password = urllib.parse.quote_plus(mongodb_pass)
-# client = pymongo.MongoClient("mongodb+srv://%s:%s@twitterdb.xgiie.mongodb.net/bigdata?retryWrites=true&w=majority" % (username, password))
-# db = client['bigdata']
-
-
-
-
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 # api = tweepy.API(auth,wait_on_rate_limit=True)
