@@ -10,8 +10,6 @@ from src.utils.core import get_brand_config
 from src.config import config
 import copy
 from math import inf
-from tqdm import tqdm
-from tweepy import debug
 from deprecated import deprecated
 
 logging.basicConfig(format='%(asctime)s %(message)s',
@@ -22,6 +20,68 @@ logging.basicConfig(format='%(asctime)s %(message)s',
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 SUCCESS_FETCH_STATUS_MSG = 'Twitter data fetched successfully'
+
+'''
+
+@deprecated(version='0.0.1', reason='Need not helper function to source data for last 7 days.')
+def get_twitter_data(brand,category,req_param):
+    api, _ = initialize()
+    query_api = api.search_tweets
+    count = 0
+    tweet_count = 0
+    db = build_connection()
+    try:
+        req_id = str(uuid.uuid1())
+        logger.debug(req_param)
+        tweets = tweepy.Cursor(query_api, **req_param).items(20)
+        for tweet in tweets:
+            tweet_count +=1
+            print('tweet at time=',str(datetime.now()))
+            # logger.debug(req_param)
+            # logger.info(tweet._json)
+            if tweet:
+                tweet._json['created_at'] = tweet.created_at
+                req_res_status = 200
+                req_res_message = "twitter data fetched successfully"
+                logger.debug(tweet._json)
+                insert_tweet(req_id,brand,category,tweet._json, db)
+                if count == 0:
+                    insert_tweet_metadata(req_id, req_param, req_res_status, req_res_message, db)
+                    count+=1
+            else:
+                req_res_status = 404
+                req_res_message = "twitter data not found for Hastag: "+ req_param['q']
+                insert_tweet_metadata(req_id, req_param, req_res_status, req_res_message, db)
+
+
+    except tweepy.error.TweepError as e:
+        req_res_status = e.response.status_code
+        req_res_message = ast.literal_eval(e.response._content.decode('utf-8'))
+        req_res_message = req_res_message['errors'][0]['message']
+        insert_tweet_metadata(req_id, req_param, req_res_status, req_res_message)
+     
+    return tweet_count
+
+@deprecated(version='0.0.1', reason='Need not source data of last 7 days only.')
+def get_7days_tweets():
+    brand_configuration_file = glom(config, 'brand_configuration_file')
+    brand_configuration = get_brand_config(brand_configuration_file)
+
+    for data in brand_configuration['brands']:
+        brand = data['name']
+        logger.info(f'\n <<<< BRAND: {brand} >>>>>\n')
+        category = data['categories'][0]
+        hastags = data['platforms'][0]['hashtags']
+        # print('hastags======>>>>>>>>>>>',hastags)
+        for hastag in hastags:
+            start_time = datetime.now().strftime('%Y-%m-%d, %H:%M:%S')
+            req_param = get_req_param(hastag)
+            logger.info(f'\n <<<< BRAND: {brand} >>>>>\n')
+            tweet_count = get_twitter_data(brand, category, req_param)
+            end_time = datetime.now().strftime('%Y-%m-%d, %H:%M:%S')
+            logger.info(f"Scripts metrics: Start time:{start_time}\tend Time:{end_time}\tNum of tweets:{tweet_count}\t Hastag:{hastag}")
+
+'''
 
 def initialize():
     logger.info('### Initializing Twitter Client ###')
@@ -84,64 +144,6 @@ def insert_tweet(req_id,brand,category, tweetdata, db):
         logger.error("Fialed to insert, already exist")
     return
 
-@deprecated(version='0.0.1', reason='Need not helper function to source data for last 7 days.')
-def get_twitter_data(brand,category,req_param):
-    api, _ = initialize()
-    query_api = api.search_tweets
-    count = 0
-    tweet_count = 0
-    db = build_connection()
-    try:
-        req_id = str(uuid.uuid1())
-        logger.debug(req_param)
-        tweets = tweepy.Cursor(query_api, **req_param).items(20)
-        for tweet in tweets:
-            tweet_count +=1
-            print('tweet at time=',str(datetime.now()))
-            # logger.debug(req_param)
-            # logger.info(tweet._json)
-            if tweet:
-                tweet._json['created_at'] = tweet.created_at
-                req_res_status = 200
-                req_res_message = "twitter data fetched successfully"
-                logger.debug(tweet._json)
-                insert_tweet(req_id,brand,category,tweet._json, db)
-                if count == 0:
-                    insert_tweet_metadata(req_id, req_param, req_res_status, req_res_message, db)
-                    count+=1
-            else:
-                req_res_status = 404
-                req_res_message = "twitter data not found for Hastag: "+ req_param['q']
-                insert_tweet_metadata(req_id, req_param, req_res_status, req_res_message, db)
-
-
-    except tweepy.error.TweepError as e:
-        req_res_status = e.response.status_code
-        req_res_message = ast.literal_eval(e.response._content.decode('utf-8'))
-        req_res_message = req_res_message['errors'][0]['message']
-        insert_tweet_metadata(req_id, req_param, req_res_status, req_res_message)
-     
-    return tweet_count
-
-@deprecated(version='0.0.1', reason='Need not source data of last 7 days only.')
-def get_7days_tweets():
-    brand_configuration_file = glom(config, 'brand_configuration_file')
-    brand_configuration = get_brand_config(brand_configuration_file)
-
-    for data in brand_configuration['brands']:
-        brand = data['name']
-        logger.info(f'\n <<<< BRAND: {brand} >>>>>\n')
-        category = data['categories'][0]
-        hastags = data['platforms'][0]['hashtags']
-        # print('hastags======>>>>>>>>>>>',hastags)
-        for hastag in hastags:
-            start_time = datetime.now().strftime('%Y-%m-%d, %H:%M:%S')
-            req_param = get_req_param(hastag)
-            logger.info(f'\n <<<< BRAND: {brand} >>>>>\n')
-            tweet_count = get_twitter_data(brand, category, req_param)
-            end_time = datetime.now().strftime('%Y-%m-%d, %H:%M:%S')
-            logger.info(f"Scripts metrics: Start time:{start_time}\tend Time:{end_time}\tNum of tweets:{tweet_count}\t Hastag:{hastag}")
-
 def get_historical_tweets():
     logger.info('[ENTER] get_historical_tweets')
     start_time = '2021-01-01T00:00:00Z'
@@ -162,7 +164,6 @@ def get_historical_tweets():
     media_fields = ['duration_ms', 'height', 'media_key', 'preview_image_url', 'type', 'url', 'width', 'public_metrics', 'alt_text']
     place_fields = ['contained_within', 'country', 'country_code', 'full_name', 'geo', 'id', 'name', 'place_type']
     poll_fields = ['duration_minutes', 'end_datetime', 'id', 'options', 'voting_status']
-    file_name = 'samsung_2020.json'
 
     db = build_connection()
 
@@ -187,7 +188,7 @@ def get_historical_tweets():
                                     max_results=500
                                     ).flatten(limit=inf)
         req_id = str(uuid.uuid1())
-        for tweet in tqdm(tweets):
+        for tweet in tweets:
             tweet_json = copy.deepcopy(tweet.data)
             rt = tweet.get('referenced_tweets')
             created_at = tweet.get('created_at')
