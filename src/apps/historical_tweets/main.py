@@ -5,7 +5,7 @@ from glom import glom
 import uuid
 import ast
 from datetime import datetime
-from src.utils.dbconnect import build_connection
+from src.utils.dbconnect import build_connection, insert_tweet_metadata, insert_tweet
 from src.utils.core import get_brand_config
 from src.config import config
 import copy
@@ -19,7 +19,6 @@ logging.basicConfig(format='%(asctime)s %(message)s',
                     ])
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
-SUCCESS_FETCH_STATUS_MSG = 'Twitter data fetched successfully'
 
 '''
 
@@ -120,29 +119,6 @@ def get_req_param(hastag):
     }
     # req_params = {"q": hastag, "count": 100, "lang": "en"}
     return req_params
-
-def insert_tweet_metadata(req_id, req_params, db, 
-                        req_res_status=200, 
-                        req_res_message=SUCCESS_FETCH_STATUS_MSG):
-    # logger.info('Updating metadata information')
-    mdata = {
-        "req_id": req_id,
-        "req_params": req_params,
-        "req_resp_status": req_res_status,
-        "req_res_message": req_res_message
-    }
-    twitterMetaData = db.twitterMetaData
-    return twitterMetaData.insert_one(mdata)
-
-def insert_tweet(req_id,brand,category, tweetdata, db):
-    # logger.info('Inserting Tweet')
-    twitterData = db.twitterData
-    twdata = {"req_id":req_id,"brand":brand,"category":category,"tweetInfo":tweetdata}
-    try:
-        twitterData.insert_one(twdata)
-    except:
-        logger.error("Fialed to insert, already exist")
-    return
 
 def get_historical_tweets():
     logger.info('[ENTER] get_historical_tweets')
