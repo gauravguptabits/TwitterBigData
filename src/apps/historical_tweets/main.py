@@ -80,6 +80,21 @@ def get_7days_tweets():
             end_time = datetime.now().strftime('%Y-%m-%d, %H:%M:%S')
             logger.info(f"Scripts metrics: Start time:{start_time}\tend Time:{end_time}\tNum of tweets:{tweet_count}\t Hastag:{hastag}")
 
+@deprecated(version='0.0.1', reason='Need not source data of last 7 days only.')
+def get_req_param(hastag):
+    # current_date = datetime.now().strftime('%Y-%m-%d')
+    # previous_date = (datetime.now() - timedelta(7)).strftime('%Y-%m-%d')
+    current_date = '2021-02-01'
+    previous_date = '2021-01-01'
+    req_params = {
+        "q": hastag, 
+        "count": 100, 
+        "lang": "en",
+        # "since": previous_date, 
+        # "until": current_date
+    }
+    # req_params = {"q": hastag, "count": 100, "lang": "en"}
+    return req_params
 '''
 
 def initialize():
@@ -105,20 +120,6 @@ def initialize():
                         access_token_secret=access_token_secret)
     return api, client
 
-def get_req_param(hastag):
-    # current_date = datetime.now().strftime('%Y-%m-%d')
-    # previous_date = (datetime.now() - timedelta(7)).strftime('%Y-%m-%d')
-    current_date = '2021-02-01'
-    previous_date = '2021-01-01'
-    req_params = {
-        "q": hastag, 
-        "count": 100, 
-        "lang": "en",
-        # "since": previous_date, 
-        # "until": current_date
-    }
-    # req_params = {"q": hastag, "count": 100, "lang": "en"}
-    return req_params
 
 def get_historical_tweets():
     logger.info('[ENTER] get_historical_tweets')
