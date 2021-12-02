@@ -7,17 +7,19 @@
 	],
 	"brands": [
 		{
+			"active": false,
 			"name": "Sony",
 			"categories": ["Consumer Electronics"],
 			"platforms": [
 				{						
 					"name": "Twitter",
-					"hashtags": ["#Sony", "#sonyindia", "#SonyXperia"] ,
+					"hashtags": ["#Sony", "#sonyindia", "#SonySupport"] ,
 					"handle": "Sony"
 				}
 			]
 		},
 		{
+			"active": false,
 			"name": "Huawei",
 			"categories": ["Consumer Electronics"],
 			"platforms": [
@@ -29,12 +31,13 @@
 			]
 		},
 		{
+			"active": false,
 			"name": "Panasonic",
 			"categories": ["Consumer Electronics"],
 			"platforms": [
 				{						
 					"name": "Twitter",
-					"hashtags": ["#Panasonic", "#panasonicindia"] ,
+					"hashtags": ["#Panasonic", "#panasonicindia", "#panasonicsupport"] ,
 					"handle": "Panasonic"
 				}
 			]
@@ -139,12 +142,13 @@
 			]
 		},
 		{
+			"active": true,
 			"name": "Samsung",
 			"categories": ["Consumer Electronics"],
 			"platforms": [
 				{						
 					"name": "Twitter",
-					"hashtags": ["#Samsung","#SamsungIndia", "#SamsungGalaxy", "#SamsungSucks","#SamsungComplaint", "#SamsungSupport"] , 
+					"hashtags": ["#Samsung","#SamsungIndia", "#SamsungSucks","#SamsungComplaint", "#SamsungSupport"] , 
 					"handle": "Samsung"
 				}
 			]

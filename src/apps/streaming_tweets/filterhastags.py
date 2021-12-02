@@ -1,22 +1,24 @@
 import json
+from src.config import config
+from glom import glom
+from src.utils.core import get_brand_config
 
-hastags_list = []
 
-with open('category_updated.json') as f:
-    datas = json.load(f)
-
-for data  in datas['brands']:
-    # print('*'*100)
-    # print(brand)
-    brand = data['name']
-    category = data['categories'][0]
-    hastags = data['platforms'][0]['hashtags']
-    for hastag in hastags:
-        hastags_list.append(hastag.lower())
-
+def initialize():
+    brand_config_file = glom(config, 'brand_configuration_file')
+    hastags_list = []
+    brand_config = get_brand_config(brand_config_file)
+    for data  in brand_config['brands']:
+        # print('*'*100)
+        # print(brand)
+        brand = data['name']
+        category = data['categories'][0]
+        hastags = data['platforms'][0]['hashtags']
+        for hastag in hastags:
+            hastags_list.append(hastag.lower())
+    return set(hastags_list)
 # print('hastag list============>',hastags_list)
 
-cat_hastags = set(hastags_list)
 
 def get_hastags(htags, hastag_set):
         stream_hastags= ["#"+x["text"].lower() for x in htags]
@@ -26,6 +28,7 @@ def get_hastags(htags, hastag_set):
 def get_hastag_list(raw_data):
     # print("streamming data inside filter ===========>",raw_data)
     data = json.loads(raw_data)
+    cat_hastags = initialize()
     try:
         hastag_set = set()
         if "extended_tweet" in data and data["extended_tweet"]["entities"]["hashtags"]:

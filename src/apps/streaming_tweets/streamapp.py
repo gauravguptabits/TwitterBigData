@@ -10,9 +10,12 @@ from datetime import datetime, timedelta
 import tweepy
 from tweepy import Stream
 from tweepy import OAuthHandler
-from tweepy.streaming import StreamListener
-from dataprocessing import do_dataprocess
-from sendemail import send_mail
+from tweepy.streaming import Stream
+from .dataprocessing import do_dataprocess
+from src.utils.sendemail import send_mail
+from glom import glom
+from src.config import config
+from src.utils.core import get_brand_config
 
 logging.basicConfig(filename="twittStream.log",
                     format='%(asctime)s %(message)s',
@@ -20,15 +23,7 @@ logging.basicConfig(filename="twittStream.log",
 logger=logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
-user_email = os.environ["user_email"]  
-user_email_pass = os.environ["user_email_pass"] 
-consumer_key = os.environ['consumer_key']
-consumer_secret = os.environ['consumer_secret']
-access_token = os.environ['access_token']
-access_token_secret = os.environ['access_token_secret']
-
-
-class TweetListener(StreamListener):
+class TweetListener(Stream):
     def __init__(self, api):
         super().__init__(api) # call superclass's init
 
@@ -48,16 +43,19 @@ class TweetListener(StreamListener):
         #     return False
         return True
 
+def get_streaming_tweets():
+    user_email = glom(config, 'mail_setting.user_email')
+    user_email_pass = glom(config, 'mail_setting.user_email_pass')
+    consumer_key = glom(config, 'twitter_app.consumer_key')
+    consumer_secret = glom(config, 'twitter_app.consumer_secret')
+    access_token = glom(config, 'twitter_app.access_token')
+    access_token_secret = glom(config, 'twitter_app.access_token_secret')
+    brand_config_filepath = glom(config, 'brand_configuration_file')
 
-def send_notification(e):
-    send_mail(user_email, user_email_pass,e)
-
-def main():
     try:
-        with open('category_updated.json') as f:
-            datas = json.load(f)
+        brand_config = get_brand_config(brand_config_filepath)
         hastags_list = []
-        for data  in datas['brands']:
+        for data in brand_config['brands']:
             brand = data['name']
             category = data['categories'][0]
             hastags = data['platforms'][0]['hashtags']
@@ -73,13 +71,7 @@ def main():
         twitterStream.filter(track=hastags_list,is_async=True, languages=["en"])
     except Exception as e:
         print("Error Occured during Streaming")
-        send_notification(e)
-
-
-
-
-if __name__=="__main__":
-    main()
+        send_mail(user_email, user_email_pass, e)
     
 
 
