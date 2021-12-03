@@ -123,8 +123,8 @@ def initialize():
 
 def get_historical_tweets():
     logger.info('[ENTER] get_historical_tweets')
-    start_time = '2021-01-01T00:00:00Z'
-    end_time = '2021-12-01T00:00:00Z'
+    start_time = '2020-01-01T00:00:00Z'
+    end_time = '2021-01-01T00:00:00Z'
     _, client = initialize()
     brand_configuration_file = glom(config, 'brand_configuration_file')
     brands_configuration = get_brand_config(brand_configuration_file)

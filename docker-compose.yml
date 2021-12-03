@@ -5,6 +5,7 @@ services:
     build: ./
     network_mode: host
     environment:
+      PYTHON_ENV : "${PYTHON_ENV}"
       user_email : "${user_email}"
       user_email_pass : "${user_email_pass}"
       mongodb_user : "${mongodb_user}"

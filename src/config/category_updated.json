@@ -31,7 +31,7 @@
 			]
 		},
 		{
-			"active": false,
+			"active": true,
 			"name": "Panasonic",
 			"categories": ["Consumer Electronics"],
 			"platforms": [
@@ -142,7 +142,7 @@
 			]
 		},
 		{
-			"active": true,
+			"active": false,
 			"name": "Samsung",
 			"categories": ["Consumer Electronics"],
 			"platforms": [
