@@ -9,7 +9,7 @@ config = {
     'db_config': {
         'host': 'localhost',
         'port': '27017',
-        'dbname': 'bigdata_dev',
+        'dbname': 'bigdata_stag',
         'user': os.environ.get('mongodb_user'),
         'pass': os.environ.get('mongodb_pass')
     },

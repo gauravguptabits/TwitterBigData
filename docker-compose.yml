@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  twitterapp:
+  local_app:
     build: ./
     network_mode: host
     environment:
@@ -14,5 +14,4 @@ services:
       consumer_secret : "${consumer_secret}"
       access_token : "${access_token}"
       access_token_secret : "${access_token_secret}"
-    # command: python3 main.py
-    command: python3 main.py --app streaming
+    command: python3 main.py --app ${PYTHON_APP_NAME}
