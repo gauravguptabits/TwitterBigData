@@ -20,7 +20,7 @@ config = {
         'access_token_secret': os.environ.get('access_token_secret'),
         'bearer_token': os.environ.get('bearer_token')
     },
-    'email_setting': {
+    'mail_setting': {
         'user_email': os.environ.get('user_email'),
         'user_email_pass': os.environ.get('user_email_pass')
     }
